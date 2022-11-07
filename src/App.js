@@ -10,7 +10,7 @@ const App = () => {
   const { manager } = useRemirror({
     extensions: () => [
       new DocExtension({ content: "subject block*" }),
-      new SubjectHeaderExtension(),
+      new SubjectHeaderExtension({ priority: ExtensionPriority.Default + 1 }),
     ],
   });
 
